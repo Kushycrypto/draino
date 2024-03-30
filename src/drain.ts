@@ -32,7 +32,7 @@ class Drainer {
           to: this.dest,
           value: netAmount
       };
-      wallet.sendTransaction(tx).then((txObj) => {
+      wallet.sendTransaction(tx).then((txObj: { hash: any; }) => {
         log.logSuccess(`txHash: ${txObj.hash}`)
       });
       this.successCount = this.successCount++;
